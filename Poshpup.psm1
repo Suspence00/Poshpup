@@ -41,22 +41,22 @@ function Get-DDAPIKeys{
 function Send-DDAPIMetric{
     param(
     [Parameter(Mandatory,HelpMessage="Enter the hostname for the Metric")]
-    [string]$hostname,
+    [string]$Hostname,
 
     [Parameter(Mandatory,HelpMessage="Enter the name of the Metric")]
-    [string]$metricName,
+    [string]$MetricName,
 
     [Parameter()]
-    [int]$time,
+    [int]$Time,
 
     [Parameter(Mandatory,HelpMessage="Enter the value of Metric")]
-    [string]$metric,
+    [string]$Metric,
 
     [Parameter()]
-    [string]$tags,
+    [string]$Tags,
 
     [Parameter()]
-    [string]$type
+    [string]$Type
 
     )
 
@@ -71,7 +71,7 @@ function Send-DDAPIMetric{
                 "timestamp",
                 "metric"]],
         "tags": "",
-        "type": ""
+        "type": "guage"
             }]}' | ConvertFrom-Json
 
     $json.series[0].host = $hostname
