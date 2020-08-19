@@ -42,7 +42,7 @@ This powershell module includes the following functions:
 * **Note: This will send an empty string if nothing is provided**
 #### Parameter: Type
 * The Type of Metric being sent
-* **Note: This will default to Guage if nothing is configured**
+* **Note: This will default to gauge if nothing is configured**
 
 #### Sample Code
 ```powershell
