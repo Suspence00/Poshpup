@@ -71,7 +71,7 @@ function Send-DDAPIMetric{
                 "timestamp",
                 "metric"]],
         "tags": "",
-        "type": "guage"
+        "type": "gauge"
             }]}' | ConvertFrom-Json
 
     $json.series[0].host = $hostname
